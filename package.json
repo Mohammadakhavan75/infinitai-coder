@@ -1,0 +1,53 @@
+{
+  "name": "infinitai-coder",
+  "displayName": "infinitai-coder",
+  "description": "Code with InfinitAI",
+  "version": "0.1.1",
+  "publisher": "InfinitAI",
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "infinitai-coder.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "icons":{
+      "id": "my-logo",
+      "path": "logo.png",
+      "type": "image/png",
+      "size": {
+        "16": 16,
+        "32": 32,
+        "48": 48,
+        "128": 128
+      }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.94.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
