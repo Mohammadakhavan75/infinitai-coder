@@ -22,21 +22,15 @@ export function activate(context: vscode.ExtensionContext) {
 						const textBeforeCursor = document.getText(new vscode.Range(new vscode.Position(0, 0), position));
 						console.log("Sending data to server");
 						// Provide inline suggestions'
-						const response = await axios.post('http://185.211.58.37:51234/v1/completions', {
-							model: 'qwen2.5-coder-7b-instruct',
-							prompt: textBeforeCursor, // Send all the text before the cursor
-							max_tokens: 30
+						const response = await axios.post('https://api.infinitai.ir/space', {
+							text: textBeforeCursor,
 						});
+						const responseData = JSON.parse(response.data);
 						console.log("Parsing the response");
-						const completionText = response.data.choices[0].text;
+						const completionText = responseData.choices[0].text;
 						const item = new vscode.InlineCompletionItem(completionText);
 						resolve([item]);
-						// }
-						// catch (error) {
-                        //     console.error('Error contacting LLM:', error);
-                        //     resolve([]); // Return an empty array if there is an error
-						// }
-					}, 700);
+					}, 1000);
                 });
             }
         }
