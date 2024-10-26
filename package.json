@@ -2,7 +2,7 @@
   "name": "infinitai-coder",
   "displayName": "infinitai-coder",
   "description": "Code with InfinitAI",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "publisher": "InfinitAI",
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
       }
     ]
   },
-  "icons": "assets/logo.png",
+  "icon": "assets/logo.png",
   "scripts": {
     "build": "webpack"
   },
