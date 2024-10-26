@@ -2,9 +2,15 @@
 Code with InfinitAI
 
 
-**Buy me a coffee**
+# How it works
+It will complete your code intelligently using AI.
 
-If you enjoy my work, consider buying me a coffee. Your support helps me continue creating content and improving projects for the community.
+![Alt Text](./assets/demo.gif)
+
+
+# Support Me :) !
+
+If you enjoy my work, consider **buying me a coffee**. Your support helps me continue creating content and improving projects for the community.
 
 BTC: bc1qqkr508m7ekxvjgrux6dxxrt474p6fytludfl2h
 
